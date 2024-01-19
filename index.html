@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hoosier Lottery Numbers!</h1>
+
+    <script>
+        let numbersFor = "";
+        for (let i = 0; i < 6; i++) {
+            let randomNumber = Math.floor(Math.random() * 49) + 1;
+            numbersFor += `${randomNumber} `;
+        }
+        document.querySelector('h1').textContent += ` (For Loop): ${numbersFor}`;
+
+        let numbersWhile = "";
+        let count = 0;
+        while (count < 6) {
+            let randomNumber = Math.floor(Math.random() * 49) + 1;
+            numbersWhile += `${randomNumber} `;
+            count++;
+        }
+        document.querySelector('h1').textContent += ` (While Loop): ${numbersWhile}`;
+    </script>
+</body>
+</html>
